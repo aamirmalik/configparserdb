@@ -19,6 +19,7 @@ setup(
     author_email='aamirm@gmail.com',
     url='https://github.com/aamirmalik/configparserdb',
     license=license,
-    packages=find_packages(exclude=('tests', 'docs'))
+    packages=['configparserdb'],
+    zip_safe=False
 )
 

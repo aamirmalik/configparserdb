@@ -12,7 +12,7 @@ def usage():
     print '         element - is the field value being requested'
     print '         db file - is the database file (default is db.cfg)'
 
-def configparserdb_read(section, element, dbfile):
+def read(section, element, dbfile):
     Config=ConfigParser.ConfigParser()
     Config.read(dbfile)
     if section in Config.sections():
@@ -61,7 +61,7 @@ def main(argv):
         print 'Error: -e <element> is mandatory'
         usage()
         sys.exit(1)
-    value=configparserdb_read(section, element, dbfile)
+    value=read(section, element, dbfile)
     if value == '':
         print "FAILED"
         sys.exit(1)
